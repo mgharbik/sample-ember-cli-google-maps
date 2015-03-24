@@ -1,6 +1,12 @@
 <h2 id="title">Welcome to Google Map whith Ember Cli.</h2>
 
-{{google-map lat=centerLat lng=centerLng zoom=zoom gopt_zoomControl=false type='satellite'}}
+{{google-map markerInfoWindowTemplateName='map/info-window' 
+			 markers=model 
+			 lat=centerLat 
+			 lng=centerLng 
+			 zoom=zoom 
+			 gopt_zoomControl=false 
+			 type='satellite' }}
 
 <div class="controls">
   <label>
