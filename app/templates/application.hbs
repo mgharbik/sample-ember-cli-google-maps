@@ -1,11 +1,12 @@
 <h2 id="title">Welcome to Google Map whith Ember Cli.</h2>
 
-{{google-map markerInfoWindowTemplateName='map/info-window' 
-			 markers=model 
-			 lat=centerLat 
-			 lng=centerLng 
-			 zoom=zoom 
-			 gopt_zoomControl=false 
+{{google-map markerInfoWindowTemplateName='map/info-window'
+			 markers=model
+			 polylines=polylinesArray
+			 lat=centerLat
+			 lng=centerLng
+			 zoom=zoom
+			 gopt_zoomControl=false
 			 type='satellite' }}
 
 <div class="controls">
@@ -13,5 +14,9 @@
   	Zoom:
     {{input type="range" value=zoom min=0 max=18 step=1}}
 	{{zoom}}
+  </label>
+  <label>
+	Number of points:
+  	{{polylinesArray.firstObject.path.length}}
   </label>
 </div>
