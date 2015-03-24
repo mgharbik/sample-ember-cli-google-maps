@@ -12,13 +12,21 @@
 			 type='satellite' }}
 
 <div class="controls">
-  <label>
+  <div>
   	Zoom:
     {{input type="range" value=zoom min=0 max=18 step=1}}
 	{{zoom}}
-  </label>
-  <label>
+  </div>
+  <div>
 	Number of points:
   	{{polylinesArray.firstObject.path.length}}
-  </label>
+  </div>
+  <div>
+	Center:
+  	{{centerLat}}, {{centerLng}}
+  </div>
+  <div>
+	Bounds:
+  	
+  </div>
 </div>
