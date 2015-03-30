@@ -1,32 +1,33 @@
-<h2 id="title">Welcome to Google Map whith Ember Cli.</h2>
+<h2 id="title">Welcome to Google Map with Ember Cli.</h2>
 
-{{google-map markerInfoWindowTemplateName='map/info-window'
-			 markers=model
-			 polylines=polylinesArray
-			 markerViewClass='map/marker'
-			 autoFitBounds=true
-			 lat=centerLat
-			 lng=centerLng
-			 zoom=zoom
-			 gopt_zoomControl=false
-			 type='satellite'}}
+{{google-map
+markers=model
+markerController='map/my-marker'
+markerInfoWindowTemplateName='map/info-window'
+markerViewClass='map/marker'
+autoFitBounds=true
+lat=centerLat
+lng=centerLng
+zoom=zoom
+gopt_zoomControl=false
+type='satellite'}}
 
 <div class="controls">
   <div>
-  	Zoom:
+    Zoom:
     {{input type="range" value=zoom min=0 max=18 step=1}}
-	{{zoom}}
+    {{zoom}}
   </div>
   <div>
-	Number of points:
-  	{{polylinesArray.firstObject.path.length}}
+    Number of points:
+    {{polylinesArray.firstObject.path.length}}
   </div>
   <div>
-	Center:
-  	{{centerLat}}, {{centerLng}}
+    Center:
+    {{centerLat}}, {{centerLng}}
   </div>
   <div>
-	Bounds:
-	
+    Bounds:
+
   </div>
 </div>
