@@ -1,0 +1,8 @@
+<h1>Google maps by emberjs component</h1>
+
+{{#if selectedLocation}}
+  {{google-maps latitude=selectedLocation.latitude longitude=selectedLocation.longitude markers=markers}}
+{{/if}}
+{{view Ember.Select content=locations value=selectedLocation optionLabelPath="content.name"}}
+{{input value=markers.0.latitude type="number" step="0.0001"}}
+{{input value=markers.0.longitude type="number" step="0.0001"}}
